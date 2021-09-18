@@ -1,4 +1,4 @@
-# Generate draw for turnament
+# Generate draw for tournament
 
 ## Available Scripts
 
