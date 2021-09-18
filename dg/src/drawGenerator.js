@@ -1,6 +1,6 @@
-export function drawGenerator(numberOfPlayers) {
+export function drawGenerator(players) {
 
-    let rounds = {};
+    let rounds = [];
 
     const branch = (seed, level, limit, round) => {
 
@@ -20,7 +20,7 @@ export function drawGenerator(numberOfPlayers) {
         }
     }
 
-    const limit = Math.ceil(Math.log2(numberOfPlayers) + 1);
+    const limit = Math.ceil(Math.log2(players.length) + 1);
 
     for (let round = 1; round < limit; round++) {
         branch(1, 1, limit - round + 1, round);

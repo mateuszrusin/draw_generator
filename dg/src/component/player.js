@@ -6,20 +6,19 @@ import ListItemText from "@material-ui/core/ListItemText";
 import ListItemSecondaryAction from "@material-ui/core/ListItemSecondaryAction";
 import Checkbox from "@material-ui/core/Checkbox";
 import React from "react";
-import {username} from "../helper/username";
 
-const Player = ({id}) => (
+const Player = ({player}) => (
     <ListItem button>
         <ListItemAvatar>
             <Avatar
-                alt={username(id)}
-                src={`/static/images/avatar/${id}.jpg`}
+                alt={player.name}
+                src={`/static/images/avatar/${player.id}.jpg`}
             />
         </ListItemAvatar>
         <ListItemIcon>
-            {id}
+            {player.id}
         </ListItemIcon>
-        <ListItemText primary={username(id)} />
+        <ListItemText primary={player.name} />
         <ListItemSecondaryAction>
             <Checkbox edge="end" />
         </ListItemSecondaryAction>

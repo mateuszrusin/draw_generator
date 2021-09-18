@@ -8,8 +8,8 @@ const Game = ({game}) => (
     <Box m={3}>
         <Paper elevation={3}>
             <List component="nav" aria-label="main mailbox folders">
-                <Player id={game.seed} />
-                <Player id={game.opponent} />
+                <Player player={game.seed} />
+                <Player player={game.opponent} />
             </List>
         </Paper>
     </Box>

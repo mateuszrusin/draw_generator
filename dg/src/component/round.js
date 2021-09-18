@@ -3,10 +3,10 @@ import React from "react";
 import Level from "./level";
 import Games from "./games";
 
-const Round = ({draw, round}) => (
+const Round = ({games, round}) => (
     <Grid item xs>
-        <Level round={Object.keys(draw).length - round} />
-        <Games games={draw[round]} />
+        <Level round={round} />
+        <Games games={games} />
     </Grid>
 );
 
